@@ -5,7 +5,6 @@ function Navbar() {
     <header>
       <div className="logo-section">
         <img src={Logo} alt="" />
-        <span>Apto Flow</span>
         <nav className="navbar-section">
           <ul>
             <li>
