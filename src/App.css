@@ -4,15 +4,164 @@
   padding: 2rem;
   /* text-align: center; */
 }
-/* Navbar section */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+li {
+  list-style: none;
+}
 
-/* Main section */
+/* *** NAVBAR SECTION *** */
+.header-container {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #EDECF6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
 
+#af-logo-btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#af-logo {
+  width: 65px;
+  transition: .3s;
+}
 
-/* Footer section */
-.footer-section {
+#af-logo:hover {
+  filter: drop-shadow(0px 0px 15px #747bff)
+}
+
+#af-text-logo {
+  width: 75px;
+}
+
+.logo-section {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar-section {
+  width: 430px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#navbar-section ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.search-bar-container {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+#magnifying-glass {
+  width: 25px;
+}
+
+#input-text-bar {
+  width: 90%;
+  height: 30px;
+  color: #747bff;
+  background-color: #EDECF6;
+  border: none;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+#input-text-bar:hover {
+  border: 2px solid #747bff;
+}
+
+#input-text-bar::placeholder {
+  color:#747bff;
+}
+
+#search-button {
+  padding: 5px;
+  background-color: transparent;
+  color: #646cff;
+  transition: .3s;
+}
+
+#search-button:hover {
+  color: #fff;
+  background-color: #747bff;
+}
+
+
+
+/* *** MAIN SECTION *** */
+
+
+
+/* *** FOOTER SECTION *** */
+.footer-section {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #EDECF6;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+#footer-logo {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-logo:hover {
+  filter: drop-shadow(0px 0px 15px #747bff)
+}
+
+#footer-logo img{
+  width: 80px;
+}
+
+.text-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container p {
+  text-align: center;
 }

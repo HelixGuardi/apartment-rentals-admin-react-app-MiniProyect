@@ -8,7 +8,8 @@ function MainSection() {
       <div>
         {everyCard.map((eachCard) => {
           return (
-            <li>{eachCard.id}</li> /* cambiarlo por la estructura que queremos para el listado */
+            <li key={eachCard.id}>{eachCard.id}</li> 
+            /* cambiarlo por la estructura que queremos para el listado */
           )
         })}
       </div>

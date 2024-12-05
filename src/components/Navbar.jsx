@@ -1,11 +1,16 @@
-import Logo from "../assets/logo-sin-fondo.png";
+import LogoOnly from "../assets/logo-no-name-sin-fondo.png";
+import LogoText from "../assets/logo-no-draw-sin-fondo.png";
+import MagnifyingGlass from "../assets/magnifying-glass-icon-removebg.png"
 
 function Navbar() {
   return (
-    <header>
+    <header className="header-container">
       <div className="logo-section">
-        <img src={Logo} alt="" />
-        <nav className="navbar-section">
+        <button id="af-logo-btn">
+          <img id="af-logo" src={LogoOnly} alt="AF Logo" />
+        </button>
+        <img id="af-text-logo" src={LogoText} alt="AF Logo" />
+        <nav id="navbar-section">
           <ul>
             <li>
               <a href="#">Home</a>
@@ -16,19 +21,21 @@ function Navbar() {
             <li>
               <a href="#">About Us</a>
             </li>
+            <li>
+              <a href="#">Join Us!</a>
+            </li>
+            <li>
+              <a href="#">Log In</a>
+            </li>
           </ul>
         </nav>
       </div>
-      <div className="search-bar">
+      <div className="search-bar-container">
         <form className="form" action="/search">
-          <img className="magnifying-glass" src="" alt="magnifying-glass" />
-          <input type="text" placeholder="Search packages" />
-          <button className="search-button">Search</button>
+          <img id="magnifying-glass" src={MagnifyingGlass} alt="magnifying-glass" />
+          <input id="input-text-bar" type="text" placeholder="   Tu alquiler, en un clic" />
+          <button id="search-button">Search</button>
         </form>
-        <div className="auth-links">
-            <span className="join"><a href="#">Join Us!</a></span>
-            <span className="log-in"><a href="#">Log In</a></span>
-        </div>
       </div>
     </header>
   );
