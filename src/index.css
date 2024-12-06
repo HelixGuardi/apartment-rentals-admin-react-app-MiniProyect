@@ -40,9 +40,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #c780803d;
   cursor: pointer;
   transition:  .3s;
+
 }
 
 button:focus,
