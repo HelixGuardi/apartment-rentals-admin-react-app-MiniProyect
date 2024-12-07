@@ -126,31 +126,56 @@ li {
   background-color: #EDECF6;
   border-radius: 20px;
   padding: 10px;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
   gap: 10px;
 }
 
 .each-card {
   margin: 10px;
+  width: 320px;
+  min-height: 400px;
   background-color: #747bff;
   border-radius: 15px;
   overflow: hidden;
-  text-align: center;
-
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
+.img {
+  position: relative; 
+  width: 100%;
+}
+.fav-button {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none; 
+  border-radius: 50%; 
+  padding: 5px;
+  cursor:auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega un sombreado suave */
+}
 .info-card-container img{
-  width: 300px;
+  width: 100%;
+  
+}
+.info-card-container {
+  flex-grow: 1; 
+  height: auto;
+}
+.info-card-text {
+  padding-inline: 10px;
 }
 
 .btn-card-container {
   margin: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* *** FOOTER SECTION *** */

@@ -17,25 +17,22 @@ function RentCard() {
         return (
           <div key={eachCard.id} className="each-card">
             <div className="info-card-container">
-              <div>
+              <div className="img">
                 <img src={placeHolderImg} alt="Imagen de un anuncio" />
+                <FavButton everyCard={everyCard} setEveryCard={setEveryCard} className='fav-button'/>
               </div>
 
-              <div>
+              <div className="info-card-text">
                 <h4>{eachCard.name}</h4>
                 <p>
                   {eachCard.city}, {eachCard.country}
                 </p>
-              </div>
-
-              <div>
                 <p>{eachCard.host_name}</p>
               </div>
             </div>
             <div className="btn-card-container">
               <button>Saber más</button>
-              <FavButton everyCard={everyCard} setEveryCard={setEveryCard}/>
-              <button onClick={() => handleDelete(eachCard.id)}>Eliminar</button>
+              <button onClick={() => handleDelete(eachCard.id)}>🗑️</button>
             </div>
           </div>
         );
