@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import data from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
+
 function RentCard() {
   const [everyCard, setEveryCard] = useState(data.results);
+
+  const handleDelete = (idToDelte) => {
+    const stateClone = everyCard.filter((card) => card.id !== idToDelte);
+    setEveryCard(stateClone);
+  }
+
   return (
     <div id="rentCard-container">
       {everyCard.map((eachCard) => {
@@ -26,7 +33,7 @@ function RentCard() {
             </div>
             <div className="btn-card-container">
               <button>Saber más</button>
-              <button>Borrar</button>
+              <button onClick={() => handleDelete(eachCard.id)}>Eliminar</button>
               <button>Favoritos</button>
             </div>
           </div>
