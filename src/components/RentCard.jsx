@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import data from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
+import FavButton from './FavButton'
+
 function RentCard() {
   const [everyCard, setEveryCard] = useState(data.results);
   return (
@@ -27,7 +29,7 @@ function RentCard() {
             <div className="btn-card-container">
               <button>Saber más</button>
               <button>Borrar</button>
-              <button>Favoritos</button>
+              <FavButton everyCard={everyCard} setEveryCard={setEveryCard}/>
             </div>
           </div>
         );
