@@ -1,33 +1,38 @@
 import React, { useState } from "react";
 import data from "../data/initialData.json";
-import placeHolderImg from '../assets/house-placeholder.jpg'
+import placeHolderImg from "../assets/house-placeholder.jpg";
 function RentCard() {
-    const [everyCard, setEveryCard] = useState(data.results);
-    return(
-        
-    <div style={{backgroundColor: "pink", display: "flex", flexWrap:'wrap'}}>
-        {everyCard.map((eachCard) => {
-          return (
-           <div key={eachCard.id} >
+  const [everyCard, setEveryCard] = useState(data.results);
+  return (
+    <div id="rentCard-container">
+      {everyCard.map((eachCard) => {
+        return (
+          <div key={eachCard.id} className="each-card">
+            <div className="info-card-container">
+              <div>
+                <img src={placeHolderImg} alt="Imagen de un anuncio" />
+              </div>
 
-            <div style={{padding: '10px',margin: '10px', backgroundColor: 'lightcoral', maxHeight: '300px'}}>
-                <div>
-                 <img src={placeHolderImg} alt="Imagen de un anuncio" style={{width: '300px', height: 'auto', margin:'-10px'}} />
-                </div>
+              <div>
+                <h4>{eachCard.name}</h4>
+                <p>
+                  {eachCard.city}, {eachCard.country}
+                </p>
+              </div>
 
-                <div style = {{position: 'fixed'}}>
-                 <h4>{eachCard.name}</h4>
-                 <p>{eachCard.city}, {eachCard.country}</p>
-                </div>
-
-                <div>
-                 <p>{eachCard.host_name}</p>
-                </div>
-           </div>
-                <button>Saber más</button>
+              <div>
+                <p>{eachCard.host_name}</p>
+              </div>
             </div>
-          )
-        })}
-      </div>)
+            <div className="btn-card-container">
+              <button>Saber más</button>
+              <button>Borrar</button>
+              <button>Favoritos</button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
-export default RentCard
+export default RentCard;

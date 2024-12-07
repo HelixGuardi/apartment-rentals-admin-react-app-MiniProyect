@@ -122,8 +122,36 @@ li {
 
 
 /* *** MAIN SECTION *** */
+#rentCard-container {
+  background-color: #EDECF6;
+  border-radius: 20px;
+  padding: 10px;
 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
 
+.each-card {
+  margin: 10px;
+  background-color: #747bff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-card-container img{
+  width: 300px;
+}
+
+.btn-card-container {
+  margin: 10px;
+}
 
 /* *** FOOTER SECTION *** */
 .footer-section {
