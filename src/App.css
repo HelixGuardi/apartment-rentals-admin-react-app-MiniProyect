@@ -137,7 +137,7 @@ li {
   margin: 10px;
   width: 320px;
   min-height: 400px;
-  background-color: #747bff;
+  background-color: #d2c9ed89;
   border-radius: 15px;
   overflow: hidden;
   text-align: left;
@@ -217,4 +217,17 @@ li {
 
 .text-container p {
   text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #333;
+      color: #fff;
+  }
+  .each-card {
+    color: #333;
+    background-color:  #6f649389;
+    
+  }
+
 }
