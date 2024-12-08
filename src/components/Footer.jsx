@@ -1,20 +1,36 @@
-import Logo from "../assets/logo-sin-fondo.png"
+import Logo from "../assets/logo-sin-fondo.png";
 
 function Footer() {
-
-    
   return (
     <footer className="footer-section">
       <button id="footer-logo">
-          <img src={Logo} alt="AF Logo" />
-        </button>
+        <img src={Logo} alt="AF Logo" />
+      </button>
       <div className="text-container">
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-          optio sed eaque? Cumque excepturi id, accusantium earum debitis esse
-          minus quos eum perferendis rem facere similique molestias placeat cum
-          ducimus.
+          Desarrollado con pasión por el equipo de <strong>Aptoflow</strong>.
+          Construyendo soluciones digitales para la administración de
+          alquileres. <br></br>{" "}
+          <span id="reserved-rights-text">&copy; 2024 Aptoflow. Todos los derechos reservados.</span>
         </p>
+      </div>
+      <div>
+        <a
+          href="https://github.com/HelixGuardi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Victor Hugo{" "}
+        </a>{" "}
+        <span id="gitHub-footer-hr"> | </span>
+        <a
+          href="https://github.com/MMARTID"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Miguel
+        </a>
       </div>
     </footer>
   );
