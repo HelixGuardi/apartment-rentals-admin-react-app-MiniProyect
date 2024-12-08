@@ -32,7 +32,7 @@ function RentCard() {
               </div>
             </div>
             <div className="btn-card-container">
-            <Link to="/SaberMas">
+            <Link to={`/SaberMas/${eachCard.id}`}>
               <button>Saber más</button>
             </Link>
               <button onClick={() => handleDelete(eachCard.id)}>🗑️</button>

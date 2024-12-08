@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={ <RentCard />} />
           <Route path="/Favorites" element={ <Favorites /> } />
-          <Route path="/SaberMas" element={ <SaberMas /> } /> {/* Hacer con que una vez se haga click en "Saber más" que salga en la URL el nombre del card al que se ha hecho click en el botón */}
+          <Route path="/SaberMas/:id" element={ <SaberMas /> } /> {/* Hacer con que una vez se haga click en "Saber más" que salga en la URL el nombre del card al que se ha hecho click en el botón */}
           <Route path="/Profile" element={ <Profile /> } />
           
           <Route path="*" element={  <NotFound /> }/>
