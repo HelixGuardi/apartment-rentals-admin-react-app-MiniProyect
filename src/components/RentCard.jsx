@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import data from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
-import FavButton from './FavButton'
+import FavButton from './FavButton';
+import { Link } from 'react-router-dom';
 
 function RentCard() {
   const [everyCard, setEveryCard] = useState(data.results);
@@ -31,12 +32,14 @@ function RentCard() {
               </div>
             </div>
             <div className="btn-card-container">
+            <Link to="/SaberMas">
               <button>Saber más</button>
+            </Link>
               <button onClick={() => handleDelete(eachCard.id)}>🗑️</button>
             </div>
           </div>
         );
-      })}
+      })};
     </div>
   );
 }

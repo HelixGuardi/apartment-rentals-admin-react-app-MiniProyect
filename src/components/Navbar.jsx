@@ -22,10 +22,7 @@ function Navbar() {
               <a href="#">About Us</a>
             </li>
             <li>
-              <a href="#">Join Us!</a>
-            </li>
-            <li>
-              <a href="#">Log In</a>
+              <a href="#">Profile</a>
             </li>
           </ul>
         </nav>

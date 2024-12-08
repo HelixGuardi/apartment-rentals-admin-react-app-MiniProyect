@@ -204,6 +204,8 @@ li {
   border: 1px solid #7a71ff;
 }
 
+/* *** 404 not found page *** */
+
 #notFound-container {
   height: 400px;
   border-radius: 10px;
@@ -214,6 +216,24 @@ li {
   box-shadow: 5px 5px 10px #747bff;
 
 }
+
+/* *** Saber Más *** */
+.main-container{
+  color:#000;
+  background-color: #EDECF6;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px #747bff;
+}
+
+.main-container hr {
+  width: 90%;
+  margin: 5px;
+  border: 3px solid #747bff;
+  border-radius: 20px;;
+  box-shadow: 3px 3px 7px #646cff;
+}
+
 /* *** FOOTER SECTION *** */
 .footer-section {
   margin-top: 30px;
