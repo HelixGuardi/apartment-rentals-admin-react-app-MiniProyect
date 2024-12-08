@@ -3,8 +3,6 @@ import RentCard from "./RentCard";
 
 function MainSection() {
   
-
-
   return (
     <>
     <div className="main-section-container" > 
