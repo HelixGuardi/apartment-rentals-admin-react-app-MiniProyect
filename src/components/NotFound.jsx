@@ -1,7 +1,10 @@
+import NotFound404 from "../assets/404.png"
+
 function NotFound() {
 
     return(
-        <div></div>
+        <div id="notFound-container">
+        </div>
     )
 }
 
