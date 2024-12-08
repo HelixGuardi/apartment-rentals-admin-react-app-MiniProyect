@@ -1,17 +1,22 @@
 import Logo from "../assets/logo-sin-fondo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer-section">
-      <button id="footer-logo">
-        <img src={Logo} alt="AF Logo" />
-      </button>
+      <Link to="/">
+        <button id="footer-logo">
+          <img src={Logo} alt="AF Logo" />
+        </button>
+      </Link>
       <div className="text-container">
         <p>
           Desarrollado con pasión por el equipo de <strong>Aptoflow</strong>.
           Construyendo soluciones digitales para la administración de
           alquileres. <br></br>{" "}
-          <span id="reserved-rights-text">&copy; 2024 Aptoflow. Todos los derechos reservados.</span>
+          <span id="reserved-rights-text">
+            &copy; 2024 Aptoflow. Todos los derechos reservados.
+          </span>
         </p>
       </div>
       <div>
