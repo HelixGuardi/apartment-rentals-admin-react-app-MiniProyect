@@ -1,7 +1,9 @@
 function Profile() {
 
     return(
-        <div></div>
+        <div className="main-container">
+            <h1>Perfil aqui</h1>
+        </div>
     )
 }
 

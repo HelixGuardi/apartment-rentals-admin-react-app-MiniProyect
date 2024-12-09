@@ -1,6 +1,5 @@
 import LogoOnly from "../assets/logo-no-name-sin-fondo.png";
 import LogoText from "../assets/logo-no-draw-sin-fondo.png";
-import MagnifyingGlass from "../assets/magnifying-glass-icon-removebg.png";
 import { Link } from "react-router-dom"
 
 function Navbar() {
@@ -16,31 +15,16 @@ function Navbar() {
         <nav id="navbar-section">
           <ul>
             <li>
-              <a href="#">Favorites</a>
+              <Link to="/Favorites">Favoritos</Link>
             </li>
             <li>
-              <a href="#">About Us</a>
+            <Link to="/AboutUs">Sobre Nosotros</Link>
             </li>
             <li>
-              <a href="#">Profile</a>
+            <Link to="/Profile">Perfil</Link>
             </li>
           </ul>
         </nav>
-      </div>
-      <div className="search-bar-container">
-        <form className="form" action="/search">
-          <img
-            id="magnifying-glass"
-            src={MagnifyingGlass}
-            alt="magnifying-glass"
-          />
-          <input
-            id="input-text-bar"
-            type="text"
-            placeholder="   Tu alquiler, en un clic"
-          />
-          <button id="search-button">Search</button>
-        </form>
       </div>
     </header>
   );

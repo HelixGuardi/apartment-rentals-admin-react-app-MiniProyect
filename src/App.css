@@ -131,7 +131,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -146,10 +146,28 @@ li {
   display: flex;
   flex-direction: column;
 }
+
+#add-btn {
+  height: 400px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #d1d1d1;
+  box-shadow: 5px 5px 10px #333;
+  transition: .3s;
+}
+
+#add-btn:hover {
+  color: #fff;
+  background-color: #747bff;
+  border: 5px solid #646cff;
+  box-shadow: 10px 10px 10px #333;
+}
+
 .img {
   position: relative; 
   width: 100%;
 }
+
 .fav-button {
   position: absolute; 
   top: 10px; 
@@ -247,10 +265,162 @@ li {
 } */
 
 .more-info-container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* *** ADD-RENT PAGE *** */
+#add-rent-container form {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#add-rent-container span {
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: #747bff;
+  color: white;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+#main-form-info {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+}
+
+#main-form-info label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-form-info label input{
+  width: 180px;
+  height: 50px;
+  font-weight: 700;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #7a71ff;
+  border-right: 3px solid #646cff;
+  border-radius: 10px;
+
+  transition: .5s;
+}
+
+#main-form-info label input:hover {
+  color: #fff;
+  background-color: #646cff;
+  box-shadow: 5px 5px 10px #333;
+}
+
+.text-description-container {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.text-description-container label input{
+  width: 1100px;
+  height: 85%;
+  margin-top: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #333;
+  transition: .3s;
+}
+
+.text-description-container label input:hover{
+  box-shadow: 10px 10px 10px #7a71ff;
+}
+
+.data-property-container {
+  width: 100%;
+  height: 200px;
+  background-color: #646cff;
+  box-shadow: 0px 0px 10px #333;
+  border-radius: 15px;
+  padding: 20px; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  transition: .3s;
+}
+
+.data-property-container:hover {
+  box-shadow: 10px 10px 5px #747bff;
+}
+
+.data-property-container label {
+  margin: 35px;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.data-property-container label input {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.data-property-container label select {
+  width: 125px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+#add-rent-btn {
+  width: 100%;
+  height: 65px;
+  color: #747bff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+
+  background-color: transparent;
+  border-radius: 15px;
+  border: 3px solid #747bff;
+
+  transition: .5s;
+}
+
+#add-rent-btn:hover {
+  color: #fff;
+  background-color: #747bff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #333;
+  text-shadow: 5px 5px 15px #333;
 }
 
 /* *** FOOTER SECTION *** */

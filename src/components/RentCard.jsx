@@ -3,6 +3,7 @@ import data from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
 import FavButton from './FavButton';
 import { Link } from 'react-router-dom';
+import SearchBar from "./SearchBar";
 
 function RentCard() {
   const [everyCard, setEveryCard] = useState(data.results);
@@ -14,6 +15,7 @@ function RentCard() {
 
   return (
     <div id="rentCard-container">
+    <SearchBar />
       {everyCard.map((eachCard) => {
         return (
           <div key={eachCard.id} className="each-card">
@@ -40,6 +42,9 @@ function RentCard() {
           </div>
         );
       })};
+      <Link to="/AddRent">
+        <button id="add-btn">Añadir +</button>
+      </Link>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 function Favorites() {
 
     return(
-        <div></div>
+        <div className="main-container">
+            <h1>FAVORITOS AQUI</h1>
+        </div>
     )
 }
 
