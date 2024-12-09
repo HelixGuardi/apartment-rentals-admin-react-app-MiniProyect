@@ -174,3 +174,5 @@ function AddRent(props) {
 }
 
 export default AddRent;
+
+// Importante arreglar el problema de la "key" / ID, para conseguir agregar nuevas gestiones de alquiler sin que se rompa el código
