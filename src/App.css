@@ -222,7 +222,7 @@ li {
   color:#000;
   background-color: #EDECF6;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 5px 5px 10px #747bff;
 }
 
@@ -240,10 +240,19 @@ li {
   border-radius: 10px;
   object-fit: cover;  
 }
-.user-details {
+
+/* .user-details {
   margin-top: 20px;
   padding-inline: 20px;
+} */
+
+.more-info-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
 /* *** FOOTER SECTION *** */
 .footer-section {
   margin-top: 30px;
@@ -308,3 +317,5 @@ li {
   }
 
 }
+
+/* futuramente: medias @ */

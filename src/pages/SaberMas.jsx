@@ -1,50 +1,65 @@
-import { useParams } from "react-router-dom"
-import allCards from "../data/initialData.json"
+import { useParams } from "react-router-dom";
+import allCards from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
 
 function SaberMas() {
-
-  const parametrosDinamicos = useParams()  
+  const parametrosDinamicos = useParams();
   const foundUser = allCards.results.find((eachCard) => {
-   
     if (eachCard.id === parametrosDinamicos.id) {
-      return true 
+      return true;
     } else {
-      return false 
-    } })
-  console.log(foundUser.url)
+      return false;
+    }
+  });
+  // console.log(foundUser.url)
 
-    return(
-     <div className="main-container">
-               <img src={foundUser.picture_url.url} alt={foundUser.name} className="user-image" />
-          <div className="user-details">
-                <h2>{foundUser.name}</h2>
-                <h3>{`${foundUser.city}, ${foundUser.country}`}</h3>
-                <h4>{foundUser.host_name}</h4>
-                <p>{`${foundUser.review_scores_rating} / 100`}</p>
-                <hr />
-                <p>{foundUser.description}</p>
-                <hr />
-                
-                <p>HostRules text</p>
-                <hr />
-                <p>Property type</p>
-                <p>Acomodations</p>
-                <p>BathRooms</p>
-                <p>BedRooms</p>
-                <p>Beds</p>
-                <h5>HostRules:</h5>
-                <p>{foundUser.house_rules}</p>
-                <hr />
-                <p>Price</p>
-                <p>Cleaning fee</p>
-                <p>Host since</p>
-                <p>Host responsive time</p>
-                <hr />
-                <p>Politicas de cancelación</p>      
-         </div> 
-     </div>
-    )
+  return (
+    <div className="main-container">
+      <div id="main-info">
+        <img
+          src={foundUser.picture_url.url}
+          alt={foundUser.name}
+          className="user-image"
+        />
+        <h2>{foundUser.name}</h2>
+        <h3>{`${foundUser.city}, ${foundUser.country}`}</h3>
+        <h4>{foundUser.host_name}</h4>
+        <p>{`${foundUser.review_scores_rating} / 100`}</p>
+      </div>
+
+      <div className="more-info-container">
+        <hr />
+
+        <div id="description">
+          <p>{foundUser.description}</p> <br />
+          <p>Tipo de propiedad: {foundUser.property_type}</p>
+          <p>Acomodaciones: {foundUser.accommodates}</p>
+          <p>Baños: {foundUser.bathrooms}</p>
+          <p>Quartos: {foundUser.bedrooms}</p>
+          <p>Camas: {foundUser.beds}</p>
+        </div>
+
+        <hr />
+
+        <div id="price-and-rules">
+          <p>Precio: {foundUser.price}€</p>
+          <p>Tasa de limpieza: {foundUser.cleaning_fee}€</p>
+          <p>Host desde: {foundUser.host_since}</p>
+          <p>
+            Tiempo de respuesta del host: {foundUser.host_response_time}
+          </p>{" "}
+          <br />
+          <h5>HostRules:</h5>
+          <p>{foundUser.house_rules}</p>
+        </div>
+
+        <div id="policy-section">
+          <h6>Politica de cancelación:</h6>
+          <p>{foundUser.cancellation_policy}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default SaberMas;
