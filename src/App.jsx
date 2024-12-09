@@ -1,7 +1,8 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 import RentCard  from "./components/RentCard"
 import Favorites from "./pages/Favorites"
 import SaberMas from "./pages/SaberMas";
@@ -9,15 +10,18 @@ import Profile from "./pages/Profile";
 import NotFound from "./components/NotFound";
 import AddRent from "./pages/AddRent.jsx"
 import AboutUs from "./pages/AboutUs.jsx";
+import Data from "./data/initialData.json"
 
 function App() {
+  const [everyCard, setEveryCard] = useState(Data.results);
+
   return (
     <>
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={ <RentCard /> } />
-          <Route path="/AddRent" element={ <AddRent /> } />
+          <Route path="/" element={ <RentCard everyCard={everyCard} setEveryCard={setEveryCard}/> } />
+          <Route path="/AddRent" element={ <AddRent everyCard={everyCard} setEveryCard={setEveryCard}/> } />
           <Route path="/Favorites" element={ <Favorites /> } />
           <Route path="/SaberMas/:id" element={ <SaberMas /> } /> 
           <Route path="/Profile" element={ <Profile /> } />

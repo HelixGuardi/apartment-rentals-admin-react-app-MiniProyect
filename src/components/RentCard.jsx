@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import data from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
 import FavButton from './FavButton';
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
 
-function RentCard() {
-  const [everyCard, setEveryCard] = useState(data.results);
+function RentCard(props) {
+  const everyCard = props.everyCard;
+  const setEveryCard = props.setEveryCard;
 
   const handleDelete = (idToDelte) => {
     const stateClone = everyCard.filter((card) => card.id !== idToDelte);
