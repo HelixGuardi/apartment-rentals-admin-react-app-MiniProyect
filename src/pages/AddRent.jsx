@@ -1,9 +1,12 @@
-import { use } from "react";
 import { useState } from "react";
 
 function AddRent(props) {
-    const [rent, setRent] = useState(props.everyCard)
+    //traigo el estado del listado de todos los alquileres de App.jsx a AddRent.jsx
+    const everyCard = props.everyCard
+    const setEveryCard = props.setEveryCard
 
+    //listado de todas las variables utilizadas como valores para el formulario (estado inicial)
+    //en el formulario los estados se actualizarán con el valor providenciado
     const [titleName, setTitleName] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [cityName, setCityName] = useState("");
@@ -20,6 +23,7 @@ function AddRent(props) {
     const [price, setPrice] = useState(0);
     const [cleaningFee, setCleaningFee] = useState(0);
 
+    //listado de funciones para la gestión de cambio de valores en el formulario
     const handleTitleNameInput = (event) => setTitleName(event.target.value);
     const handleImageUrl = (event) => setImageUrl(event.target.value);
     const handleCityInput = (event) => setCityName(event.target.value);
@@ -36,11 +40,36 @@ function AddRent(props) {
     const handlePriceInput = (event) => setPrice(event.target.value);
     const handleCleaningFeeInput = (event) => setCleaningFee(event.target.value);
 
+    // función para la gestión del Submit del formulario
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log("submit", price, cleaningFee);
+        // console.log("submit");
+        const newRent = {titleName, imageUrl, cityName, countryName, hostName, rating, description, houseRules, propertyType, accommodatesNum, bathRooms, bedRooms, bedsNum, price, cleaningFee};
+
+        const newRentArr = [...everyCard, newRent];
+        setEveryCard(newRentArr);
+
+        // console.log(newRent);
+
+        // devolvemos los estados a sus valores iniciales
+        setTitleName("");
+        setImageUrl("");
+        setCityName("");
+        setCountryName("");
+        setHostName("");
+        setRating(0);
+        setDescription("");
+        setHouseRules("");
+        setPropertyType("");
+        setAccommodatesNum(0);
+        setBathRooms(0);
+        setBedRooms(0);
+        setBedsNum(0);
+        setPrice(0);
+        setCleaningFee(0);
     }
 
+    // return de toda la estructura para el nuevo objeto (el nuevo alquiler) que se va a crear
     return(
         <div id="add-rent-container" className="main-container">
             <form onSubmit={handleFormSubmit}>
