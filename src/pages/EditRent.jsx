@@ -5,12 +5,10 @@ function AddRent(props) {
     //traigo el estado del listado de todos los alquileres de App.jsx a AddRent.jsx
     const everyCard = props.everyCard
     const setEveryCard = props.setEveryCard
-    console.log(everyCard)
+    
     const dynamicParams = useParams()
-    console.log(dynamicParams)
 
-
-    const foundRent = everyCard.find((eachCard) => {
+    let foundRent = everyCard.find((eachCard) => {
         return eachCard.id === dynamicParams.id
 
     })
@@ -32,9 +30,10 @@ function AddRent(props) {
     const [bedsNum, setBedsNum] = useState(foundRent.beds);
     const [price, setPrice] = useState(foundRent.price);
     const [cleaningFee, setCleaningFee] = useState(foundRent.cleaning_fee);
-
+    const [id, setId] = useState(foundRent.id)
     //listado de funciones para la gestión de cambio de valores en el formulario
     const handleTitleNameInput = (event) => setTitleName(event.target.value);
+
     const handleImageUrl = (event) => setImageUrl(event.target.value);
     const handleCityInput = (event) => setCityName(event.target.value);
     const handleCountryInput = (event) => setCountryName(event.target.value);
@@ -54,56 +53,17 @@ function AddRent(props) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         // console.log("submit");
-        let max = 1000000;
-        let min = 1000;
-        let id = Math.floor(Math.random() * (max - min)) + min;
 
         // const newRent = {imageUrl, bathRooms, bedRooms, bedsNum, price, cleaningFee};
         // console.log(newRent);
-        const newRent = {
-            id: `${id}`,
-            name: titleName,
-            city: cityName,
-            country: countryName,
-            host_name: hostName,
-            review_scores_rating: rating,
-            description: description,
-            house_rules: houseRules,
-            property_type: propertyType,
-            accommodates: accommodatesNum,
-            bathrooms: bathRooms,
-            bedrooms: bedRooms,
-            beds: bedsNum,
-            price: price,
-            cleaning_fee: cleaningFee
-        }
+        
 
-        const newRentArr = [...everyCard, newRent];
-        setEveryCard(newRentArr);
-
-        // console.log(newRent);
-
-        // devolvemos los estados a sus valores iniciales
-        setTitleName("");
-        setImageUrl("");
-        setCityName("");
-        setCountryName("");
-        setHostName("");
-        setRating(0);
-        setDescription("");
-        setHouseRules("");
-        setPropertyType("");
-        setAccommodatesNum(0);
-        setBathRooms(0);
-        setBedRooms(0);
-        setBedsNum(0);
-        setPrice(0);
-        setCleaningFee(0);
+            foundRent = modRent
+            console.log(modRent)
+       
+            
     }
 
-    const randomNumId = () => {
-        return Math.floor(Math.random() * (9999999999 - 1111111111)) + 1111111111;
-    }
 
     // return de toda la estructura para el nuevo objeto (el nuevo alquiler) que se va a crear
     return(

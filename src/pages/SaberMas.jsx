@@ -25,7 +25,8 @@ function SaberMas(props) {
         {/* <img
           src={foundUser.picture_url.url}
           alt={foundUser.name}
-          className="user-image"
+           console.log(foundRent.name)
+       className="user-image"
         /> */}
         <h2>{foundUser.name}</h2>
         <h3>{`${foundUser.city}, ${foundUser.country}`}</h3>
