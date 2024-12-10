@@ -136,6 +136,7 @@ li {
 }
 
 .each-card {
+  position: relative;
   margin: 10px;
   width: 320px;
   min-height: 400px;
@@ -171,7 +172,7 @@ li {
 .fav-button {
   position: absolute; 
   top: 10px; 
-  right: 10px; 
+  right: 12px; 
   /* background-color: rgba(255, 255, 255, 0.8); */
   background-color: transparent;
   border: none; 
@@ -184,6 +185,46 @@ li {
 
 .fav-button:hover {
   filter: drop-shadow(0px 0px 5px #ca11ff);
+}
+
+.dropdown-menu {
+  width: 100%;
+  padding: 10px;
+
+  border-radius: 15px;
+  background-color: transparent;
+
+  color: #fff;
+  text-shadow: 0px 0px 5px #333;
+  font-weight: bold;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: all .3s;
+
+}
+
+.dropdown-menu li {
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+
+  border: 1px solid #646cff;
+  border-radius: 10px;
+  background-color: #646cff;
+  box-shadow: 5px 5px 10px #333;
+
+  transition: all .3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #747bff;
+  border: 1px solid #EDECF6;
+  box-shadow: 0px 0px 20px #646cff;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .info-card-container {

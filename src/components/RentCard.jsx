@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import placeHolderImg from "../assets/house-placeholder.jpg";
-import ConfigDropdown from './FavButton';
+import ConfigDropdown from './ConfigDropdown';
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
 
