@@ -5,11 +5,11 @@ function SaberMas(props) {
   const everyCard = props.everyCard;
   const setEveryCard = props.setEveryCard;
 
-  console.log(everyCard)
+  console.log(everyCard);
 
   const parametrosDinamicos = useParams();
   console.log(parametrosDinamicos);
-  
+
   const foundUser = everyCard.find((eachCard) => {
     if (eachCard.id === parametrosDinamicos.id) {
       return true;
@@ -33,35 +33,37 @@ function SaberMas(props) {
         <p>{`${foundUser.review_scores_rating} / 100`}</p>
       </div>
 
-      <div className="more-info-container">
-        <hr />
+      <hr />
 
-        <div id="description">
-          <p>{foundUser.description}</p> <br />
-          <p>Tipo de propiedad: {foundUser.property_type}</p>
-          <p>Acomodaciones: {foundUser.accommodates}</p>
-          <p>Baños: {foundUser.bathrooms}</p>
-          <p>Quartos: {foundUser.bedrooms}</p>
-          <p>Camas: {foundUser.beds}</p>
+      <div className="more-info-container">
+        <div id="main-info-content">
+          <div id="description-text">
+            <p>{foundUser.description}</p>
+          </div>
+          <div className="card-info">
+            <p>Tipo de propiedad: {foundUser.property_type}</p>
+            <p>Acomodaciones: {foundUser.accommodates}</p>
+            <p>Baños: {foundUser.bathrooms}</p>
+            <p>Quartos: {foundUser.bedrooms}</p>
+            <p>Camas: {foundUser.beds}</p>
+          </div>
         </div>
 
         <hr />
 
         <div id="price-and-rules">
+        <div className="card-info">
           <p>Precio: {foundUser.price}€</p>
           <p>Tasa de limpieza: {foundUser.cleaning_fee}€</p>
           <p>Host desde: {foundUser.host_since}</p>
           <p>
-            Tiempo de respuesta del host: {foundUser.host_response_time}
+            Tiempo de respuesta: {foundUser.host_response_time}
           </p>{" "}
-          <br />
-          <h5>HostRules:</h5>
-          <p>{foundUser.house_rules}</p>
         </div>
-
-        <div id="policy-section">
-          <h6>Politica de cancelación:</h6>
-          <p>{foundUser.cancellation_policy}</p>
+          <div id="host-rules-description">
+            <h5>HostRules:</h5>
+            <p>{foundUser.house_rules}</p>
+          </div>
         </div>
       </div>
     </div>
