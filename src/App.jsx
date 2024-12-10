@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={ <RentCard everyCard={everyCard} setEveryCard={setEveryCard}/> } />
           <Route path="/AddRent" element={ <AddRent everyCard={everyCard} setEveryCard={setEveryCard}/> } />
           <Route path="/Favorites" element={ <Favorites /> } />
-          <Route path="/SaberMas/:id" element={ <SaberMas /> } /> 
+          <Route path="/SaberMas/:id" element={ <SaberMas everyCard={everyCard} setEveryCard={setEveryCard}/> } /> 
           <Route path="/Profile" element={ <Profile /> } />
           <Route path="/AboutUs" element={ <AboutUs /> } />
           

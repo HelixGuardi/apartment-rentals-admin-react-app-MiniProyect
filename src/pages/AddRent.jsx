@@ -44,7 +44,29 @@ function AddRent(props) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         // console.log("submit");
-        const newRent = {titleName, imageUrl, cityName, countryName, hostName, rating, description, houseRules, propertyType, accommodatesNum, bathRooms, bedRooms, bedsNum, price, cleaningFee};
+        let max = 1000000;
+        let min = 1000;
+        let id = Math.floor(Math.random() * (max - min)) + min;
+
+        // const newRent = {imageUrl, bathRooms, bedRooms, bedsNum, price, cleaningFee};
+        // console.log(newRent);
+        const newRent = {
+            id: `${id}`,
+            name: titleName,
+            city: cityName,
+            country: countryName,
+            host_name: hostName,
+            review_scores_rating: rating,
+            description: description,
+            house_rules: houseRules,
+            property_type: propertyType,
+            accommodates: accommodatesNum,
+            bathrooms: bathRooms,
+            bedrooms: bedRooms,
+            beds: bedsNum,
+            price: price,
+            cleaning_fee: cleaningFee
+        }
 
         const newRentArr = [...everyCard, newRent];
         setEveryCard(newRentArr);
@@ -67,6 +89,10 @@ function AddRent(props) {
         setBedsNum(0);
         setPrice(0);
         setCleaningFee(0);
+    }
+
+    const randomNumId = () => {
+        return Math.floor(Math.random() * (9999999999 - 1111111111)) + 1111111111;
     }
 
     // return de toda la estructura para el nuevo objeto (el nuevo alquiler) que se va a crear

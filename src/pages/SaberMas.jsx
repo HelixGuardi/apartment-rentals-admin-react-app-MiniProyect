@@ -1,26 +1,32 @@
 import { useParams } from "react-router-dom";
-import allCards from "../data/initialData.json";
 import placeHolderImg from "../assets/house-placeholder.jpg";
 
-function SaberMas() {
+function SaberMas(props) {
+  const everyCard = props.everyCard;
+  const setEveryCard = props.setEveryCard;
+
+  console.log(everyCard)
+
   const parametrosDinamicos = useParams();
-  const foundUser = allCards.results.find((eachCard) => {
+  console.log(parametrosDinamicos);
+  
+  const foundUser = everyCard.find((eachCard) => {
     if (eachCard.id === parametrosDinamicos.id) {
       return true;
     } else {
       return false;
     }
   });
-  // console.log(foundUser.url)
+  // console.log(foundUser);
 
   return (
     <div className="main-container">
       <div id="main-info">
-        <img
+        {/* <img
           src={foundUser.picture_url.url}
           alt={foundUser.name}
           className="user-image"
-        />
+        /> */}
         <h2>{foundUser.name}</h2>
         <h3>{`${foundUser.city}, ${foundUser.country}`}</h3>
         <h4>{foundUser.host_name}</h4>
