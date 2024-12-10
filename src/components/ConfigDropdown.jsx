@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function ConfigDropdown(props) {
-  console.log('holaaaa',props)
   const [isOpen, setIsOpen] = useState(false)
   const [isFavorited, setIsFavorited] = useState(false)
 

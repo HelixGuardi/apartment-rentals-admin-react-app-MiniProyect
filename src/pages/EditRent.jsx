@@ -12,7 +12,7 @@ function AddRent(props) {
         return eachCard.id === dynamicParams.id
 
     })
-        console.log(foundRent)
+        console.log(foundRent);
     //listado de todas las variables utilizadas como valores para el formulario (estado inicial)
     //en el formulario los estados se actualizarán con el valor providenciado
     const [titleName, setTitleName] = useState(foundRent.name);
@@ -20,8 +20,8 @@ function AddRent(props) {
     const [cityName, setCityName] = useState(foundRent.city);
     const [countryName, setCountryName] = useState(foundRent.country);
     const [hostName, setHostName] = useState(foundRent.host_name);
-    const [rating, setRating] = useState(0);
-    const [description, setDescription] = useState(foundRent.review_scores_rating);
+    const [rating, setRating] = useState(foundRent.review_scores_rating);
+    const [description, setDescription] = useState(foundRent.description);
     const [houseRules, setHouseRules] = useState(foundRent.house_rules);
     const [propertyType, setPropertyType] = useState(foundRent.property_type);
     const [accommodatesNum, setAccommodatesNum] = useState(foundRent.accommodates);
@@ -53,15 +53,22 @@ function AddRent(props) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         // console.log("submit");
+        foundRent.name = titleName;
+        foundRent.city = cityName;
+        foundRent.country = countryName;
+        foundRent.host_name = hostName;
+        foundRent.review_scores_rating = rating;
+        foundRent.description = description;
+        foundRent.house_rules = houseRules;
+        foundRent.property_type = propertyType;
+        foundRent.accommodates = accommodatesNum;
+        foundRent.bathrooms = bathRooms;
+        foundRent.bedrooms = bedRooms;
+        foundRent.beds = bedsNum;
+        foundRent.price = price;
+        foundRent.cleaning_fee = cleaningFee;
 
-        // const newRent = {imageUrl, bathRooms, bedRooms, bedsNum, price, cleaningFee};
-        // console.log(newRent);
-        
-
-            foundRent = modRent
-            console.log(modRent)
-       
-            
+        console.log(foundRent);
     }
 
 
