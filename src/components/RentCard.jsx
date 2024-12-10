@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import placeHolderImg from "../assets/house-placeholder.jpg";
-import FavButton from './FavButton';
+import ConfigDropdown from './FavButton';
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
 
@@ -22,7 +22,7 @@ function RentCard(props) {
             <div className="info-card-container">
               <div className="img">
                 <img src={placeHolderImg} alt="Imagen de un anuncio" />
-                <FavButton everyCard={everyCard} setEveryCard={setEveryCard} className='fav-button'/>
+                <ConfigDropdown everyCard={everyCard} setEveryCard={setEveryCard} className='fav-button'/>
               </div>
 
               <div className="info-card-text">
