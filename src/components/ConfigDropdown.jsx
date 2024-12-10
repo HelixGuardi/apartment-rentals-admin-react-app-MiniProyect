@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function ConfigDropdown(props) {
-
+  console.log('holaaaa',props)
   const [isOpen, setIsOpen] = useState(false)
   const [isFavorited, setIsFavorited] = useState(false)
 
@@ -32,7 +32,10 @@ function ConfigDropdown(props) {
           <li onClick={toggleFavorite}>
             {isFavorited ? "Quitar de Favoritos" : "Agregar a Favoritos"}
           </li>
-          <li >Editar</li>
+          <Link to={`/Edit/${props.eachCard.id}`} >
+           <li >Editar</li>
+          </Link>
+         
           <li >Eliminar</li>
         </ul>
       )}

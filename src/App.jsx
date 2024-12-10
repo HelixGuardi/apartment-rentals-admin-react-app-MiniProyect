@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound";
 import AddRent from "./pages/AddRent.jsx"
 import AboutUs from "./pages/AboutUs.jsx";
 import Data from "./data/initialData.json"
+import EditRent from "./pages/EditRent.jsx"
 
 function App() {
   const [everyCard, setEveryCard] = useState(Data.results);
@@ -26,7 +27,8 @@ function App() {
           <Route path="/SaberMas/:id" element={ <SaberMas everyCard={everyCard} setEveryCard={setEveryCard}/> } /> 
           <Route path="/Profile" element={ <Profile /> } />
           <Route path="/AboutUs" element={ <AboutUs /> } />
-          
+          <Route path="/Edit/:id" element={ <EditRent everyCard={everyCard} setEveryCard={setEveryCard}/> } />
+
           <Route path="*" element={  <NotFound /> }/>
 
         </Routes>
