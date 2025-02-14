@@ -21,7 +21,9 @@ function RentCard(props) {
           <div key={eachCard.id} className="each-card">
             <div className="info-card-container">
               <div className="img">
+                <Link to={`/SaberMas/${eachCard.id}`}>
                 <img src={placeHolderImg} alt="Imagen de un anuncio" />
+                </Link>
                 <ConfigDropdown everyCard={everyCard.id} eachCard={eachCard} setEveryCard={setEveryCard} className='fav-button'/>
               </div>
 

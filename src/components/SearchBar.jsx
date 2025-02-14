@@ -4,16 +4,17 @@ function SearchBar() {
 
     return(
         <div className="search-bar-container">
-        <form className="form" action="/search">
           <img
             id="magnifying-glass"
             src={MagnifyingGlass}
             alt="magnifying-glass"
           />
+        <form className="form" action="/search">
           <input
             id="input-text-bar"
             type="text"
-            placeholder="   Tu alquiler, en un clic"
+            style={{paddingLeft: '10px'}}
+            placeholder="Tu alquiler, en un clic"
           />
           <button id="search-button">Search</button>
         </form>
