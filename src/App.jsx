@@ -12,7 +12,7 @@ import AddRent from "./pages/AddRent.jsx"
 import AboutUs from "./pages/AboutUs.jsx";
 import Data from "./data/initialData.json"
 import EditRent from "./pages/EditRent.jsx"
-
+import Home from "./pages/Home.jsx";
 function App() {
   const [everyCard, setEveryCard] = useState(Data.results);
 
@@ -21,7 +21,7 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={ <RentCard everyCard={everyCard} setEveryCard={setEveryCard}/> } />
+          <Route path="/" element={ <Home everyCard={everyCard} setEveryCard={setEveryCard}/> } />
           <Route path="/AddRent" element={ <AddRent everyCard={everyCard} setEveryCard={setEveryCard}/> } />
           <Route path="/Favorites" element={ <Favorites /> } />
           <Route path="/SaberMas/:id" element={ <SaberMas everyCard={everyCard} setEveryCard={setEveryCard}/> } /> 

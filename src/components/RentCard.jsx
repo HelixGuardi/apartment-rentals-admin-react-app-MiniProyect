@@ -15,7 +15,7 @@ function RentCard(props) {
 
   return (
     <div id="rentCard-container">
-    <SearchBar />
+    
       {everyCard.map((eachCard) => {
         return (
           <div key={eachCard.id} className="each-card">
@@ -44,9 +44,7 @@ function RentCard(props) {
           </div>
         );
       })};
-      <Link to="/AddRent">
-        <button id="add-btn">Añadir +</button>
-      </Link>
+    
     </div>
   );
 }

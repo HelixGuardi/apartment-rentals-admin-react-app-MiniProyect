@@ -124,6 +124,14 @@ li {
 
 /* *** MAIN SECTION *** */
 #rentCard-container {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#home-container {
   background-color: #EDECF6;
   border-radius: 20px;
   padding: 10px;
